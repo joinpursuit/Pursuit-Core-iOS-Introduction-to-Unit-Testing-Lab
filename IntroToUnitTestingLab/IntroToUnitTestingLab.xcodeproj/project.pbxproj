@@ -21,6 +21,7 @@
 		3A2EEA3C23185F290074EF79 /* JokesDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2EEA3B23185F290074EF79 /* JokesDetailVC.swift */; };
 		3A2EEA3F231863BA0074EF79 /* starwars.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A2EEA3E231863BA0074EF79 /* starwars.json */; };
 		3A2EEA41231864620074EF79 /* StarWarsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2EEA40231864620074EF79 /* StarWarsModel.swift */; };
+		3A2EEA44231874630074EF79 /* StarWarsDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2EEA43231874630074EF79 /* StarWarsDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		3A2EEA3B23185F290074EF79 /* JokesDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesDetailVC.swift; sourceTree = "<group>"; };
 		3A2EEA3E231863BA0074EF79 /* starwars.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = starwars.json; sourceTree = SOURCE_ROOT; };
 		3A2EEA40231864620074EF79 /* StarWarsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsModel.swift; sourceTree = "<group>"; };
+		3A2EEA43231874630074EF79 /* StarWarsDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,10 +115,10 @@
 			children = (
 				3A2EEA0023184CE30074EF79 /* AppDelegate.swift */,
 				3A2EEA0423184CE30074EF79 /* Main.storyboard */,
-				3A2EEA3D231860AD0074EF79 /* DetailViewControllers */,
-				3A2EEA3923184EF10074EF79 /* Models */,
-				3A2EEA3623184EBB0074EF79 /* JSONs */,
 				3A2EEA3023184DF30074EF79 /* ViewControllers */,
+				3A2EEA3D231860AD0074EF79 /* DetailViewControllers */,
+				3A2EEA3623184EBB0074EF79 /* JSONs */,
+				3A2EEA3923184EF10074EF79 /* Models */,
 				3A2EEA0723184CE50074EF79 /* Assets.xcassets */,
 				3A2EEA0923184CE50074EF79 /* LaunchScreen.storyboard */,
 				3A2EEA0C23184CE50074EF79 /* Info.plist */,
@@ -173,6 +175,7 @@
 		3A2EEA3D231860AD0074EF79 /* DetailViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3A2EEA43231874630074EF79 /* StarWarsDetailVC.swift */,
 				3A2EEA3B23185F290074EF79 /* JokesDetailVC.swift */,
 			);
 			path = DetailViewControllers;
@@ -315,6 +318,7 @@
 				3A2EEA2F23184DAD0074EF79 /* TriviaViewController.swift in Sources */,
 				3A2EEA3C23185F290074EF79 /* JokesDetailVC.swift in Sources */,
 				3A2EEA0123184CE30074EF79 /* AppDelegate.swift in Sources */,
+				3A2EEA44231874630074EF79 /* StarWarsDetailVC.swift in Sources */,
 				3A2EEA41231864620074EF79 /* StarWarsModel.swift in Sources */,
 				3A2EEA3823184EE00074EF79 /* JokesModel.swift in Sources */,
 				3A2EEA3223184E050074EF79 /* JokesViewController.swift in Sources */,

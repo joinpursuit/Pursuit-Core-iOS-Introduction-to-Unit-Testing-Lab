@@ -21,7 +21,12 @@ class StarWarsViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = movieTableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath)
+        cell.textLabel?.text = movies[indexPath.row].title
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
     }
     
     private func loadData() {
@@ -41,6 +46,19 @@ class StarWarsViewController: UIViewController, UITableViewDelegate, UITableView
             fatalError("Could not decode")
         }
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier != nil else { fatalError("No identifier in segue")
+        }
+        guard let DetailVC = segue.destination as? StarWarsDetailVC
+            else { fatalError("Unexpected segue")}
+        guard let selectedIndexPath = movieTableView.indexPathForSelectedRow
+            else { fatalError("No row selected") }
+        DetailVC.selectedMovie = movies[selectedIndexPath.row]
+    }
+    
+    
     
     
 
