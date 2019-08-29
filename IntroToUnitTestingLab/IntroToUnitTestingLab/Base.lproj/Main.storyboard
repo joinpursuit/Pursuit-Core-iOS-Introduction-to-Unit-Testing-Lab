@@ -195,11 +195,11 @@
             </objects>
             <point key="canvasLocation" x="2740.579710144928" y="142.63392857142856"/>
         </scene>
-        <!--Item 1-->
+        <!--StarWars-->
         <scene sceneID="sNc-es-Jfe">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HgD-Ut-MNO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="USJ-9B-k30"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HgD-Ut-MNO" userLabel="StarWars" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Star Wars" id="USJ-9B-k30"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GqB-W5-PYq">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -233,11 +233,11 @@
             </objects>
             <point key="canvasLocation" x="1120" y="-646"/>
         </scene>
-        <!--Item-->
+        <!--Trivia-->
         <scene sceneID="fHv-R8-ah5">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5ed-41-QRQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="9Vg-wQ-z1U"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5ed-41-QRQ" userLabel="Trivia" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Trivia" id="9Vg-wQ-z1U" userLabel="Trivia"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3mF-gS-cFK">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
