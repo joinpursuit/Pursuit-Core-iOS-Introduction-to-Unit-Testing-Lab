@@ -40,12 +40,25 @@ class IntroToUnitTestingLabTests: XCTestCase {
     }
     
     
-//    func testJokeArrayCount() {
-//        let data = getJokeFromJSON()
-//        let 
-//    }
-//    
+    func testJokeArrayCount() {
+        let data = getJokeFromJSON()
+        let testJoke = Joke.getJokes(from: data)
+        XCTAssertTrue(testJoke.count == 10 , "Not 10 Jokes")
+    }
     
+    
+    
+
+    func testValuesAreCorrect(){
+        let data = getJokeFromJSON()
+        let testJoke = Joke.getJokes(from: data)
+        for i in 0..<testJoke.count {
+        XCTAssertTrue(testJoke[i].punchline == String(testJoke[i].punchline) , "punchline not a String")
+        XCTAssertTrue(testJoke[i].setup == String(testJoke[i].setup), "setup is not a String")
+        XCTAssertTrue(testJoke[i].type == String(testJoke[i].type), "type is not a String")
+            XCTAssertTrue(testJoke[i].id == Int(testJoke[i].id), "id is not an Int" )
+    }
+    }
     
     
     

@@ -18,6 +18,7 @@
 		3A2EEA3223184E050074EF79 /* JokesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2EEA3123184E050074EF79 /* JokesViewController.swift */; };
 		3A2EEA3423184EAB0074EF79 /* jokes.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A2EEA3323184EAB0074EF79 /* jokes.json */; };
 		3A2EEA3823184EE00074EF79 /* JokesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2EEA3723184EE00074EF79 /* JokesModel.swift */; };
+		3A2EEA3C23185F290074EF79 /* JokesDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2EEA3B23185F290074EF79 /* JokesDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		3A2EEA3123184E050074EF79 /* JokesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesViewController.swift; sourceTree = "<group>"; };
 		3A2EEA3323184EAB0074EF79 /* jokes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jokes.json; sourceTree = "<group>"; };
 		3A2EEA3723184EE00074EF79 /* JokesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesModel.swift; sourceTree = "<group>"; };
+		3A2EEA3B23185F290074EF79 /* JokesDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			children = (
 				3A2EEA0023184CE30074EF79 /* AppDelegate.swift */,
 				3A2EEA0423184CE30074EF79 /* Main.storyboard */,
+				3A2EEA3B23185F290074EF79 /* JokesDetailVC.swift */,
 				3A2EEA3923184EF10074EF79 /* Models */,
 				3A2EEA3623184EBB0074EF79 /* JSONs */,
 				3A2EEA3023184DF30074EF79 /* ViewControllers */,
@@ -295,6 +298,7 @@
 			files = (
 				3A2EEA0323184CE30074EF79 /* StarWarsViewController.swift in Sources */,
 				3A2EEA2F23184DAD0074EF79 /* TriviaViewController.swift in Sources */,
+				3A2EEA3C23185F290074EF79 /* JokesDetailVC.swift in Sources */,
 				3A2EEA0123184CE30074EF79 /* AppDelegate.swift in Sources */,
 				3A2EEA3823184EE00074EF79 /* JokesModel.swift in Sources */,
 				3A2EEA3223184E050074EF79 /* JokesViewController.swift in Sources */,
