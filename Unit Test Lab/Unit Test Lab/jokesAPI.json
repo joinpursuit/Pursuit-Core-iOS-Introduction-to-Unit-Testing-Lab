@@ -1,0 +1,62 @@
+[
+    {
+        "id": 25,
+        "type": "programming",
+        "setup": "How many programmers does it take to change a lightbulb?",
+        "punchline": "None that's a hardware problem"
+    },
+    {
+        "id": 18,
+        "type": "programming",
+        "setup": "Why did the programmer quit his job?",
+        "punchline": "Because he didn't get arrays."
+    },
+    {
+        "id": 15,
+        "type": "programming",
+        "setup": "What's the best thing about a Boolean?",
+        "punchline": "Even if you're wrong, you're only off by a bit."
+    },
+    {
+        "id": 29,
+        "type": "programming",
+        "setup": "There are 10 types of people in this world...",
+        "punchline": "Those who understand binary and those who don't"
+    },
+    {
+        "id": 28,
+        "type": "programming",
+        "setup": "To understand what recursion is...",
+        "punchline": "You must first understand what recursion is"
+    },
+    {
+        "id": 56,
+        "type": "programming",
+        "setup": "How do you check if a webpage is HTML5?",
+        "punchline": "Try it out on Internet Explorer"
+    },
+    {
+        "id": 35,
+        "type": "programming",
+        "setup": "Why do Java programmers wear glasses?",
+        "punchline": "Because they don't C#"
+    },
+    {
+        "id": 74,
+        "type": "programming",
+        "setup": "Why do C# and Java developers keep breaking their keyboards?",
+        "punchline": "Because they use a strongly typed language."
+    },
+    {
+        "id": 27,
+        "type": "programming",
+        "setup": "['hip', 'hip']",
+        "punchline": "(hip hip array)"
+    },
+    {
+        "id": 72,
+        "type": "programming",
+        "setup": "I was gonna tell you a joke about UDP...",
+        "punchline": "...but you might not get it."
+    }
+]
