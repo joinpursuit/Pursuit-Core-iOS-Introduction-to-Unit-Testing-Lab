@@ -19,6 +19,8 @@
 		3A2EEA3423184EAB0074EF79 /* jokes.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A2EEA3323184EAB0074EF79 /* jokes.json */; };
 		3A2EEA3823184EE00074EF79 /* JokesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2EEA3723184EE00074EF79 /* JokesModel.swift */; };
 		3A2EEA3C23185F290074EF79 /* JokesDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2EEA3B23185F290074EF79 /* JokesDetailVC.swift */; };
+		3A2EEA3F231863BA0074EF79 /* starwars.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A2EEA3E231863BA0074EF79 /* starwars.json */; };
+		3A2EEA41231864620074EF79 /* StarWarsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2EEA40231864620074EF79 /* StarWarsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		3A2EEA3323184EAB0074EF79 /* jokes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jokes.json; sourceTree = "<group>"; };
 		3A2EEA3723184EE00074EF79 /* JokesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesModel.swift; sourceTree = "<group>"; };
 		3A2EEA3B23185F290074EF79 /* JokesDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesDetailVC.swift; sourceTree = "<group>"; };
+		3A2EEA3E231863BA0074EF79 /* starwars.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = starwars.json; sourceTree = SOURCE_ROOT; };
+		3A2EEA40231864620074EF79 /* StarWarsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,7 @@
 		3A2EEA3623184EBB0074EF79 /* JSONs */ = {
 			isa = PBXGroup;
 			children = (
+				3A2EEA3E231863BA0074EF79 /* starwars.json */,
 				3A2EEA3323184EAB0074EF79 /* jokes.json */,
 			);
 			path = JSONs;
@@ -159,6 +164,7 @@
 		3A2EEA3923184EF10074EF79 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3A2EEA40231864620074EF79 /* StarWarsModel.swift */,
 				3A2EEA3723184EE00074EF79 /* JokesModel.swift */,
 			);
 			path = Models;
@@ -277,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A2EEA0B23184CE50074EF79 /* LaunchScreen.storyboard in Resources */,
+				3A2EEA3F231863BA0074EF79 /* starwars.json in Resources */,
 				3A2EEA0823184CE50074EF79 /* Assets.xcassets in Resources */,
 				3A2EEA3423184EAB0074EF79 /* jokes.json in Resources */,
 				3A2EEA0623184CE30074EF79 /* Main.storyboard in Resources */,
@@ -308,6 +315,7 @@
 				3A2EEA2F23184DAD0074EF79 /* TriviaViewController.swift in Sources */,
 				3A2EEA3C23185F290074EF79 /* JokesDetailVC.swift in Sources */,
 				3A2EEA0123184CE30074EF79 /* AppDelegate.swift in Sources */,
+				3A2EEA41231864620074EF79 /* StarWarsModel.swift in Sources */,
 				3A2EEA3823184EE00074EF79 /* JokesModel.swift in Sources */,
 				3A2EEA3223184E050074EF79 /* JokesViewController.swift in Sources */,
 			);
