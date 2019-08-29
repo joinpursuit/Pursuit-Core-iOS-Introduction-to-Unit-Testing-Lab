@@ -52,6 +52,17 @@ class JokesViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier != nil else { fatalError("No identifier in segue")
+        }
+        guard let DetailVC = segue.destination as? JokesDetailVC
+            else { fatalError("Unexpected segue")}
+        guard let selectedIndexPath = jokesTableView.indexPathForSelectedRow
+            else { fatalError("No row selected") }
+        DetailVC.selectedJoke = jokes[selectedIndexPath.row]
+    }
+    
+    
     override func viewDidLoad() {
         jokesTableView.delegate = self
         jokesTableView.dataSource = self

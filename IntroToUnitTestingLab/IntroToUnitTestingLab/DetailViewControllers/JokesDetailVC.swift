@@ -10,7 +10,12 @@ import UIKit
 
 class JokesDetailVC: UIViewController {
 
+    var selectedJoke: Joke!
+    
+    @IBOutlet weak var jokePunchline: UILabel!
+    
     override func viewDidLoad() {
+        jokePunchline.text = selectedJoke.punchline
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

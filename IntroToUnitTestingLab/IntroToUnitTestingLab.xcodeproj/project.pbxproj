@@ -109,7 +109,7 @@
 			children = (
 				3A2EEA0023184CE30074EF79 /* AppDelegate.swift */,
 				3A2EEA0423184CE30074EF79 /* Main.storyboard */,
-				3A2EEA3B23185F290074EF79 /* JokesDetailVC.swift */,
+				3A2EEA3D231860AD0074EF79 /* DetailViewControllers */,
 				3A2EEA3923184EF10074EF79 /* Models */,
 				3A2EEA3623184EBB0074EF79 /* JSONs */,
 				3A2EEA3023184DF30074EF79 /* ViewControllers */,
@@ -162,6 +162,14 @@
 				3A2EEA3723184EE00074EF79 /* JokesModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3A2EEA3D231860AD0074EF79 /* DetailViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3A2EEA3B23185F290074EF79 /* JokesDetailVC.swift */,
+			);
+			path = DetailViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

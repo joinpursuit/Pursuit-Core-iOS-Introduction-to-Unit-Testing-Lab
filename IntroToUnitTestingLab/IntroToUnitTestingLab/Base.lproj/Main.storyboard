@@ -40,7 +40,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="uCQ-Vn-0nP" kind="show" id="xKd-iy-eNy"/>
+                                            <segue destination="uCQ-Vn-0nP" kind="show" identifier="jokeSegue" id="xKd-iy-eNy"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -58,10 +58,10 @@
             </objects>
             <point key="canvasLocation" x="1963.7681159420292" y="-646.20535714285711"/>
         </scene>
-        <!--View Controller-->
+        <!--Jokes DetailVC-->
         <scene sceneID="r0n-EW-6dI">
             <objects>
-                <viewController id="uCQ-Vn-0nP" sceneMemberID="viewController">
+                <viewController id="uCQ-Vn-0nP" customClass="JokesDetailVC" customModule="IntroToUnitTestingLab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jXa-ie-E9b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,6 +77,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="MoV-Xn-FqM"/>
                     </view>
+                    <connections>
+                        <outlet property="jokePunchline" destination="Bn7-c9-dGw" id="RB3-dw-OxH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IkQ-HG-oYM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -152,11 +155,11 @@
             </objects>
             <point key="canvasLocation" x="1119" y="-1422"/>
         </scene>
-        <!--Item 2-->
+        <!--Jokes-->
         <scene sceneID="YOY-by-B9z">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LJl-e2-ep1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="Lff-f6-rJ1"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LJl-e2-ep1" userLabel="Jokes" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Jokes" id="Lff-f6-rJ1" userLabel="Jokes"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oOb-T8-xBi">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
