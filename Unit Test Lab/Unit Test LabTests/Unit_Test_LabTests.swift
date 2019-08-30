@@ -18,6 +18,75 @@ class Unit_Test_LabTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+    
+    func testTrivia() {
+        let data = getTriviaDataFromJSON()
+        guard let trivia = TriviaWrapper.getTrivia(from: data) else {return}
+        XCTAssert(trivia != nil, "Does not exist")
+    }
+    
+    
+    private func getTriviaDataFromJSON() -> Data {
+        guard let pathToData = Bundle.main.path(forResource: "Trivia API", ofType: "json") else {fatalError("did not find path")}
+        
+        let url = URL(fileURLWithPath: pathToData)
+        
+        do {
+            let data = try Data(contentsOf: url)
+            return data
+        } catch let jsonError {
+            fatalError("\(jsonError)")
+        }
+        
+    }
+    
+    func testResultsCount() {
+        let data = getTriviaDataFromJSON()
+        guard let trivia = TriviaWrapper.getTrivia(from: data) else{return}
+        XCTAssert(trivia.results.count == 10, "Count is not ten")
+    }
+    
+    func testCleanCorrectString() {
+        let data = getTriviaDataFromJSON()
+        guard let trivia = TriviaWrapper.getTrivia(from: data) else{return}
+        XCTAssert(!trivia.results[0].getCleanCorrectString().contains("%"), "It's an empty string")
+    }
+    
+    func testCleanIncorrectArr() {
+        let data = getTriviaDataFromJSON()
+        guard let trivia = TriviaWrapper.getTrivia(from: data) else{return}
+        XCTAssert(!trivia.results[0].getCleanIncorrectArr().contains("%"), "It's an empty Arr")
+        
+    }
+    
+    func testJokes() {
+        let data = getJokesDataFromJSON()
+        guard let jokes = Jokes.getJokes(from: data) else {return}
+        XCTAssert(jokes != nil, "Does not exist")
+    }
+    
+    private func getJokesDataFromJSON() -> Data {
+        guard let pathToData = Bundle.main.path(forResource: "jokesAPI", ofType: "json") else {fatalError("did not find path")}
+        
+        let url = URL(fileURLWithPath: pathToData)
+        
+        do {
+            let data = try Data(contentsOf: url)
+            return data
+        } catch let jsonError {
+            fatalError("\(jsonError)")
+        }
+        
+    }
+    
+    func testTriviaCount() {
+        let data = getJokesDataFromJSON()
+        guard let jokes = Jokes.getJokes(from: data) else{return}
+        XCTAssert(jokes.count == 10, "Count is not ten")
+    }
 
+    
+    
+    
 
 }
