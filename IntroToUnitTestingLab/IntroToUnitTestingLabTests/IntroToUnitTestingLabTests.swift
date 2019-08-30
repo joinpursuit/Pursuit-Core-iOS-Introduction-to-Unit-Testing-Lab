@@ -52,18 +52,30 @@ class IntroToUnitTestingLabTests: XCTestCase {
     func testValuesAreCorrect(){
         let jokeData = getDataFromJSON(name:"jokes")
         let movieData = getDataFromJSON(name: "starwars")
+        let triviaData = getDataFromJSON(name: "trivia")
         let testJoke = Joke.getJokes(from: jokeData)
         let testMovie = MovieList.getMovies(from: movieData).results
-        for i in 0..<testJoke.count {
-        XCTAssertTrue(testJoke[i].punchline == String(testJoke[i].punchline) , "punchline not a String")
-        XCTAssertTrue(testJoke[i].setup == String(testJoke[i].setup), "setup is not a String")
-        XCTAssertTrue(testJoke[i].type == String(testJoke[i].type), "type is not a String")
-            XCTAssertTrue(testJoke[i].id == Int(testJoke[i].id), "id is not an Int" )
+        let testTrivia = Trivia.getTrivia(from: triviaData).results
+        for i in testJoke {
+        XCTAssertTrue(i.punchline == String(i.punchline) , "punchline not a String")
+        XCTAssertTrue(i.setup == String(i.setup), "setup is not a String")
+        XCTAssertTrue(i.type == String(i.type), "type is not a String")
+            XCTAssertTrue(i.id == Int(i.id), "id is not an Int" )
     }
-        for i in 0..<testMovie.count {
-        XCTAssertTrue(testMovie[i].title == String(testMovie[i].title), "title not a string")
-        XCTAssertTrue(testMovie[i].opening_crawl == String(testMovie[i].opening_crawl), "opening crawl not a string")
+        for i in testMovie {
+        XCTAssertTrue(i.title == String(i.title), "title not a string")
+        XCTAssertTrue(i.opening_crawl == String(i.opening_crawl), "opening crawl not a string")
         }
+        for i in testTrivia {
+            XCTAssert(i.category == String(i.category), "category not a string")
+            XCTAssert(i.correct_answer == String(i.correct_answer), "correct_answer not a string")
+            XCTAssert(i.question == String(i.question), "question not a string")
+            XCTAssert(i.type == String(i.type), "type not a string")
+            for n in i.incorrect_answers {
+            XCTAssert(n == String(n), "incorrect answer not a string")
+        }
+        
+    }
     }
     
     
@@ -83,15 +95,21 @@ class IntroToUnitTestingLabTests: XCTestCase {
     }
     
     
-//    func testMovieValuesAreCorrect(){
-//        let data = getDataFromJSON(name: "starwars")
-//        let testMovie = MovieList.getMovies(from: data).results
-//        for i in 0..<testMovie.count {
-//        XCTAssertTrue(testMovie[i].title == String(testMovie[i].title), "title not a string")
-//
-//        }
-//    }
-//
+    func testTriviaLoaded() {
+        let data = getDataFromJSON(name: "trivia")
+        let testTrivia = Trivia.getTrivia(from: data).results
+        XCTAssertTrue(testTrivia.self != nil, "Trivia failed to load")
+    }
+    
+    
+    func testTriviaArrayCount() {
+        let data = getDataFromJSON(name: "trivia")
+        let testTrivia = Trivia.getTrivia(from: data).results
+        XCTAssertTrue(testTrivia.count == 10, "Trivia array amount not 10")
+        
+    }
+    
+    
     
     
     

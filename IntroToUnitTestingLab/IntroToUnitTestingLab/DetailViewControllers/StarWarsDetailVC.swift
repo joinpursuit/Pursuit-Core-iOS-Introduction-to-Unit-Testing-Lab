@@ -12,11 +12,11 @@ class StarWarsDetailVC: UIViewController {
 
     var selectedMovie: Movies!
     
-    @IBOutlet weak var crawlLabel: UILabel!
-    
+
+    @IBOutlet weak var crawlOutlet: UITextView!
     
     override func viewDidLoad() {
-        crawlLabel.text = selectedMovie.opening_crawl
+        crawlOutlet.text = selectedMovie.opening_crawl
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
