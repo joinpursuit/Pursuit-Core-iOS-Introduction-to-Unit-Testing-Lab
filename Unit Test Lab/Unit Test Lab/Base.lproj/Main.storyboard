@@ -117,6 +117,9 @@
                         <viewLayoutGuide key="safeArea" id="faj-Ns-Ti1"/>
                     </view>
                     <navigationItem key="navigationItem" id="K2y-qJ-RDh"/>
+                    <connections>
+                        <outlet property="jokesTableView" destination="uId-I7-zpa" id="6WZ-hW-tLj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ohU-kL-XPX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

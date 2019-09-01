@@ -61,7 +61,7 @@ class Unit_Test_LabTests: XCTestCase {
     
     func testJokes() {
         let data = getJokesDataFromJSON()
-        guard let jokes = Jokes.getJokes(from: data) else {return}
+        let jokes = Jokes.getJokes(from: data)
         XCTAssert(type(of: jokes) == [Jokes].self, "This is not an array of Jokes")
     }
     
@@ -81,7 +81,7 @@ class Unit_Test_LabTests: XCTestCase {
     
     func testJokesCount() {
         let data = getJokesDataFromJSON()
-        guard let jokes = Jokes.getJokes(from: data) else{return}
+        let jokes = Jokes.getJokes(from: data)
         XCTAssert(jokes.count == 10, "Count is not ten")
     }
 
@@ -93,7 +93,7 @@ class Unit_Test_LabTests: XCTestCase {
     
     
     private func getStarWarsDataFromJSON() -> Data {
-        guard let pathToData = Bundle.main.path(forResource: "StarWars", ofType: "json") else {fatalError("did not find path")}
+        guard let pathToData = Bundle.main.path(forResource: "Star Wars API", ofType: "json") else {fatalError("did not find path")}
         
         let url = URL(fileURLWithPath: pathToData)
         
