@@ -25,13 +25,14 @@ class JokesViewController: UIViewController {
         loadJokesInfo()
     }
     
-    func configurateTableView() {
+    private func configurateTableView() {
         jokesTableView.delegate = self
         jokesTableView.dataSource = self
+        jokesTableView.rowHeight = 80
         jokesTableView.tableFooterView = UIView()
     }
     
-    func loadJokesInfo() {
+    private func loadJokesInfo() {
         
         guard let pathToJokeFile = Bundle.main.path(forResource: "jokesAPI", ofType: "json") else {fatalError("Couldn't find file")}
         
@@ -61,6 +62,20 @@ extension JokesViewController: UITableViewDataSource {
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let segueIdentifier = segue.identifier else {fatalError("No identifier in segue")}
+        
+        switch segueIdentifier {
+        case "jokeSegue":
+            guard let DetailVC = segue.destination as? JokesDetailViewController else {fatalError("unexpected segueVC")}
+            
+            guard let selectedIndexPath = jokesTableView.indexPathForSelectedRow else {fatalError("no row selected")}
+            let currentJoke = jokes[selectedIndexPath.row]
+            DetailVC.jokes = currentJoke
+        default:
+            fatalError("unexpected segue")
+        }
+    }
     
 }
 
