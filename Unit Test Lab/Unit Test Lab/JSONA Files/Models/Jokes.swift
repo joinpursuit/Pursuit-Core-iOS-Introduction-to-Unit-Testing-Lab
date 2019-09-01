@@ -13,13 +13,13 @@ struct Jokes: Codable {
     let punchline: String
     
     
-    static func getJokes(from data: Data) -> [Jokes] {
+    static func getJokes(from data: Data) throws -> [Jokes] {
         do {
             let newJoke = try JSONDecoder().decode([Jokes].self, from: data)
             return newJoke
             
-        } catch let decodeError {
-            fatalError("Could not decode \(decodeError)")
+        } catch  {
+            throw jsonError.decodingError(error)
         }
     }
 }

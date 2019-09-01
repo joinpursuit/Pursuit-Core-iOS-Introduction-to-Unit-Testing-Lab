@@ -41,7 +41,9 @@ class JokesViewController: UIViewController {
         do {
             let data = try
                 Data(contentsOf: url)
-            let jokesFromJSON = Jokes.getJokes(from: data)
+            
+            let jokesFromJSON = try
+                Jokes.getJokes(from: data)
             jokes = jokesFromJSON
             
         } catch {

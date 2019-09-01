@@ -11,13 +11,13 @@ import Foundation
 struct StarWarsWrapper: Codable {
     let results: [StarWars]
     
-    static func getStarWars(from data: Data) -> StarWarsWrapper? {
+    static func getStarWars(from data: Data) throws -> [StarWars] {
         do {
             let newStarWars = try JSONDecoder().decode(StarWarsWrapper.self, from: data)
-            return newStarWars
+            return newStarWars.results
             
         } catch {
-            return nil
+            throw jsonError.decodingError(error)
         }
     }
     

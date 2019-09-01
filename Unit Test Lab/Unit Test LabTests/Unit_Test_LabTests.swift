@@ -61,8 +61,13 @@ class Unit_Test_LabTests: XCTestCase {
     
     func testJokes() {
         let data = getJokesDataFromJSON()
-        let jokes = Jokes.getJokes(from: data)
-        XCTAssert(type(of: jokes) == [Jokes].self, "This is not an array of Jokes")
+        do {
+          let jokes = try
+            Jokes.getJokes(from: data)
+            XCTAssert(type(of: jokes) == [Jokes].self, "This is not an array of Jokes")
+        } catch {
+            XCTFail("Unable to get data")
+        }
     }
     
     private func getJokesDataFromJSON() -> Data {
@@ -81,14 +86,25 @@ class Unit_Test_LabTests: XCTestCase {
     
     func testJokesCount() {
         let data = getJokesDataFromJSON()
-        let jokes = Jokes.getJokes(from: data)
-        XCTAssert(jokes.count == 10, "Count is not ten")
+        do {
+            let jokes = try
+                Jokes.getJokes(from: data)
+            XCTAssert(jokes.count == 10, "Count is not ten")
+        } catch {
+            XCTFail("Unable to get data")
+        }
     }
 
     func testStarWars() {
         let data = getStarWarsDataFromJSON()
-        guard let starWars = StarWarsWrapper.getStarWars(from: data) else {return}
-        XCTAssert(type(of: starWars) == StarWarsWrapper.self, "This is not of type StarWarsWrapper")
+        do {
+            let starWars = try
+                StarWarsWrapper.getStarWars(from: data)
+            XCTAssert(type(of: starWars) == StarWarsWrapper.self, "This is not of type StarWarsWrapper")
+        } catch {
+           XCTFail("Unable to get data")
+        }
+        
     }
     
     
@@ -108,10 +124,13 @@ class Unit_Test_LabTests: XCTestCase {
     
     func testSWResultsCount() {
         let data = getStarWarsDataFromJSON()
-        guard let starWars = StarWarsWrapper.getStarWars(from: data) else {return}
-        XCTAssert(starWars.results.count == 7, "Count is not seven")
+        do {
+            let starWars = try
+                StarWarsWrapper.getStarWars(from: data)
+            XCTAssert(starWars.results.count == 7, "Count is not seven")
+        } catch {
+            XCTFail("Unable to get data")
+        }
     }
-    
-    
 
 }
