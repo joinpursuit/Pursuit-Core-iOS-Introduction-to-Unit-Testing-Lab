@@ -98,7 +98,7 @@
 			children = (
 				28D14A8C2318590B001E4619 /* AppDelegate.swift */,
 				28D14A902318590B001E4619 /* Main.storyboard */,
-				28D14AE1231C2AD8001E4619 /* View Controllers */,
+				28D14AE1231C2AD8001E4619 /* Main View Controllers */,
 				28D14AB2231861FA001E4619 /* JSONA Files */,
 				28D14A932318590C001E4619 /* Assets.xcassets */,
 				28D14A952318590C001E4619 /* LaunchScreen.storyboard */,
@@ -137,14 +137,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		28D14AE1231C2AD8001E4619 /* View Controllers */ = {
+		28D14AE1231C2AD8001E4619 /* Main View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				28D14ADB231C2A7A001E4619 /* JokesViewController.swift */,
 				28D14ADD231C2AA3001E4619 /* StarWarsViewController.swift */,
 				28D14ADF231C2ACD001E4619 /* TriviaViewController.swift */,
 			);
-			path = "View Controllers";
+			path = "Main View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
