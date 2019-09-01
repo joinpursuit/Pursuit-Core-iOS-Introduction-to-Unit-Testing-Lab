@@ -22,7 +22,7 @@ class Unit_Test_LabTests: XCTestCase {
     func testTrivia() {
         let data = getTriviaDataFromJSON()
         guard let trivia = TriviaWrapper.getTrivia(from: data) else {return}
-        XCTAssert(trivia != nil, "Does not exist")
+        XCTAssert(type(of: trivia) == TriviaWrapper.self, "Not of type TriviaWrapper")
     }
     
     
@@ -62,7 +62,7 @@ class Unit_Test_LabTests: XCTestCase {
     func testJokes() {
         let data = getJokesDataFromJSON()
         guard let jokes = Jokes.getJokes(from: data) else {return}
-        XCTAssert(jokes != nil, "Does not exist")
+        XCTAssert(type(of: jokes) == [Jokes].self, "This is not an array of Jokes")
     }
     
     private func getJokesDataFromJSON() -> Data {
@@ -88,12 +88,12 @@ class Unit_Test_LabTests: XCTestCase {
     func testStarWars() {
         let data = getStarWarsDataFromJSON()
         guard let starWars = StarWarsWrapper.getStarWars(from: data) else {return}
-        XCTAssert(starWars != nil, "Does not exist")
+        XCTAssert(type(of: starWars) == StarWarsWrapper.self, "This is not of type StarWarsWrapper")
     }
     
     
     private func getStarWarsDataFromJSON() -> Data {
-        guard let pathToData = Bundle.main.path(forResource: "Star Wars API", ofType: "json") else {fatalError("did not find path")}
+        guard let pathToData = Bundle.main.path(forResource: "StarWars", ofType: "json") else {fatalError("did not find path")}
         
         let url = URL(fileURLWithPath: pathToData)
         
