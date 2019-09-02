@@ -28,6 +28,7 @@ class StarWarsViewController: UIViewController {
     private func configureTableView() {
         starWarsTableView.dataSource = self
         starWarsTableView.delegate = self
+        starWarsTableView.rowHeight = 80
         starWarsTableView.tableFooterView = UIView()
     }
     
@@ -59,6 +60,22 @@ extension StarWarsViewController : UITableViewDataSource {
         let currentMovie = movies[indexPath.row]
         cell.textLabel?.text = currentMovie.title
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let segueIdentifier = segue.identifier  else {fatalError("No identifier in segue")}
+        
+        switch segueIdentifier {
+        case "starWarsSegue":
+            guard let DetailVC = segue.destination as? StarWarsDetailViewController else {fatalError("unexpected segue VC")}
+            guard let selectedIndexPath = starWarsTableView.indexPathForSelectedRow else {fatalError("no row selected")}
+            
+            let currentMovie = movies[selectedIndexPath.row]
+            DetailVC.movie = currentMovie
+        default:
+            fatalError("unexpected segue identifier")
+        }
+        
     }
 }
 

@@ -21,8 +21,13 @@ class Unit_Test_LabTests: XCTestCase {
     
     func testTrivia() {
         let data = getTriviaDataFromJSON()
-        guard let trivia = TriviaWrapper.getTrivia(from: data) else {return}
-        XCTAssert(type(of: trivia) == TriviaWrapper.self, "Not of type TriviaWrapper")
+        do {
+            let trivia = try
+                TriviaWrapper.getTrivia(from: data)
+            XCTAssert(type(of: trivia) == TriviaWrapper.self, "Not of type TriviaWrapper")
+        } catch {
+            XCTFail("Unable to get data")
+        }
     }
     
     
@@ -42,21 +47,47 @@ class Unit_Test_LabTests: XCTestCase {
     
     func testTriviaResultsCount() {
         let data = getTriviaDataFromJSON()
-        guard let trivia = TriviaWrapper.getTrivia(from: data) else{return}
-        XCTAssert(trivia.results.count == 10, "Count is not ten")
+        
+        do {
+            let trivia = try
+                TriviaWrapper.getTrivia(from: data)
+             XCTAssert(trivia.count == 10, "Count is not ten")
+        } catch {
+            XCTFail("Unable to get data")
+        }
+    }
+    
+    func testCleanQuestionString() {
+        let data = getTriviaDataFromJSON()
+        do {
+            let trivia = try
+                TriviaWrapper.getTrivia(from: data)
+            XCTAssert(!trivia[0].getCleanQuestionString().contains("%"), "It's an empty string")
+        } catch {
+            XCTFail("Unable to get data")
+        }
     }
     
     func testCleanCorrectString() {
         let data = getTriviaDataFromJSON()
-        guard let trivia = TriviaWrapper.getTrivia(from: data) else{return}
-        XCTAssert(!trivia.results[0].getCleanCorrectString().contains("%"), "It's an empty string")
+        do {
+            let trivia = try
+                TriviaWrapper.getTrivia(from: data)
+             XCTAssert(!trivia[0].getCleanCorrectString().contains("%"), "It's an empty string")
+        } catch {
+            XCTFail("Unable to get data")
+        }
     }
     
     func testCleanIncorrectArr() {
         let data = getTriviaDataFromJSON()
-        guard let trivia = TriviaWrapper.getTrivia(from: data) else{return}
-        XCTAssert(!trivia.results[0].getCleanIncorrectArr().contains("%"), "It's an empty Arr")
-        
+        do {
+            let trivia = try
+                TriviaWrapper.getTrivia(from: data)
+             XCTAssert(!trivia[0].getCleanIncorrectArr().contains("%"), "It's an empty Arr")
+        } catch {
+            XCTFail("Unable to get data")
+        }
     }
     
     func testJokes() {
@@ -127,7 +158,7 @@ class Unit_Test_LabTests: XCTestCase {
         do {
             let starWars = try
                 StarWarsWrapper.getStarWars(from: data)
-            XCTAssert(starWars.results.count == 7, "Count is not seven")
+            XCTAssert(starWars.count == 7, "Count is not seven")
         } catch {
             XCTFail("Unable to get data")
         }

@@ -9,22 +9,64 @@
 import UIKit
 
 class TriviaViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    var trivia = [Trivia]() {
+        didSet {
+            triviaTableView.reloadData()
+        }
     }
     
+    
+    @IBOutlet weak var triviaTableView: UITableView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configureTableView()
+        loadData()
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
+    
+    private func configureTableView() {
+        triviaTableView.dataSource = self
+        triviaTableView.delegate = self
+        triviaTableView.rowHeight = 80
+        triviaTableView.tableFooterView = UIView()
+    }
+    
+    private func loadData() {
+        guard let pathToTriviaFile = Bundle.main.path(forResource: "Trivia API", ofType: "json") else {fatalError("Couldn't find files")}
+        
+        let url = URL(fileURLWithPath: pathToTriviaFile)
+        
+        do {
+            let data = try
+                Data(contentsOf: url)
+            let triviaFromJSON = try
+                TriviaWrapper.getTrivia(from: data)
+            trivia = triviaFromJSON
+        } catch {
+            fatalError("Couldn't get trivia from JSON \(error)")
+        }
+    }
 
 }
+extension TriviaViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return trivia.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "triviaCell", for: indexPath)
+        let currentTrivia = trivia[indexPath.row]
+        cell.textLabel?.text = currentTrivia.getCleanQuestionString()
+        return cell
+    }
+    
+    
+}
+
+extension TriviaViewController: UITableViewDelegate {
+    
+}
+
+
