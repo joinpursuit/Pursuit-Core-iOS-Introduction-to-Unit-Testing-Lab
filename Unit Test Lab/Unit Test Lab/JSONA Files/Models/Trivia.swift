@@ -30,6 +30,7 @@ struct Trivia: Codable {
     let question: String
     private let correct_answer: String
     private let incorrect_answers:[String]
+    let type: String
     
     func getCleanQuestionString()-> String {
         return question.removingPercentEncoding ?? "EmptyString"
@@ -44,6 +45,20 @@ struct Trivia: Codable {
         for str in incorrect_answers {
             guard let cleanString = str.removingPercentEncoding else {break}
             arr.append(cleanString)
+        }
+        return arr
+    }
+    
+    func getAllOptions() -> [String] {
+        var arr = [String]()
+        if self.type == "boolean" {
+            arr = ["True", "False"]
+        } else {
+            for str in getCleanIncorrectArr() {
+                arr.append(str)
+            }
+            arr.append(getCleanCorrectString())
+            arr.shuffle()
         }
         return arr
     }

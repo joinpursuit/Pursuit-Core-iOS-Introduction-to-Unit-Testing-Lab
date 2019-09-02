@@ -29,7 +29,7 @@ class TriviaViewController: UIViewController {
     private func configureTableView() {
         triviaTableView.dataSource = self
         triviaTableView.delegate = self
-        triviaTableView.rowHeight = 80
+        triviaTableView.rowHeight = 75
         triviaTableView.tableFooterView = UIView()
     }
     

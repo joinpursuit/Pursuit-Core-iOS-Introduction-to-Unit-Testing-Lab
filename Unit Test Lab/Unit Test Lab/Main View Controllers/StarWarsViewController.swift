@@ -28,7 +28,7 @@ class StarWarsViewController: UIViewController {
     private func configureTableView() {
         starWarsTableView.dataSource = self
         starWarsTableView.delegate = self
-        starWarsTableView.rowHeight = 80
+        starWarsTableView.rowHeight = 75
         starWarsTableView.tableFooterView = UIView()
     }
     

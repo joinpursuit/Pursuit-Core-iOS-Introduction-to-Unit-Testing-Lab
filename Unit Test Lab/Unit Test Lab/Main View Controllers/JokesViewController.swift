@@ -28,7 +28,7 @@ class JokesViewController: UIViewController {
     private func configurateTableView() {
         jokesTableView.delegate = self
         jokesTableView.dataSource = self
-        jokesTableView.rowHeight = 80
+        jokesTableView.rowHeight = 75
         jokesTableView.tableFooterView = UIView()
     }
     
