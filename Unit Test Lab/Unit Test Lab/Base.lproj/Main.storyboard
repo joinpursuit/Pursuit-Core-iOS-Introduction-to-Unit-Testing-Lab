@@ -71,7 +71,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="S5i-GD-IG2">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="S5i-GD-IG2">
                                 <rect key="frame" x="68.5" y="220" width="277" height="436"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -263,7 +263,38 @@
                     <view key="view" contentMode="scaleToFill" id="qqc-Rm-CQA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="AnC-gu-Pzj">
+                                <rect key="frame" x="184" y="278.5" width="46" height="128"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B42-Jh-GSO">
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAf-Ce-d6R">
+                                        <rect key="frame" x="0.0" y="49" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7uc-Ay-5Uy">
+                                        <rect key="frame" x="0.0" y="98" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rd0-hT-Iau">
+                                <rect key="frame" x="186" y="146.5" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rd0-hT-Iau" firstAttribute="centerX" secondItem="gMa-KY-dqX" secondAttribute="centerX" id="3Qz-cR-7qn"/>
+                            <constraint firstItem="rd0-hT-Iau" firstAttribute="bottom" secondItem="AnC-gu-Pzj" secondAttribute="top" multiplier="0.6" id="LBc-Td-Boe"/>
+                            <constraint firstItem="gMa-KY-dqX" firstAttribute="top" secondItem="rd0-hT-Iau" secondAttribute="top" multiplier="0.6" id="kxn-1j-f5N"/>
+                            <constraint firstItem="AnC-gu-Pzj" firstAttribute="centerX" secondItem="gMa-KY-dqX" secondAttribute="centerX" id="xbL-hT-SVn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gMa-KY-dqX"/>
                     </view>
                 </viewController>
