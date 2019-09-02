@@ -62,6 +62,20 @@ extension TriviaViewController: UITableViewDataSource {
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    guard let segueIdentifier = segue.identifier else {fatalError("No identifier in segue")}
+        switch segueIdentifier {
+        case "triviaSegue":
+            guard let DetailVC = segue.destination as? TriviaDetailViewController else {fatalError("unexpected segue VC")}
+            guard let selectedPathIndex = triviaTableView.indexPathForSelectedRow else{fatalError("no row selected")}
+            let currentTrivia = trivia[selectedPathIndex.row]
+            DetailVC.trivia = currentTrivia
+        default:
+            fatalError("unexpected segues identifier")
+        }
+        
+    }
+    
     
 }
 
