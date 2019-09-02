@@ -51,7 +51,7 @@ struct Trivia: Codable {
     
     func getAllOptions() -> [String] {
         var arr = [String]()
-        if self.type == "boolean" {
+        if isBoolean() {
             arr = ["True", "False"]
         } else {
             for str in getCleanIncorrectArr() {
@@ -61,6 +61,10 @@ struct Trivia: Codable {
             arr.shuffle()
         }
         return arr
+    }
+    
+    func isBoolean() -> Bool {
+        return self.type == "boolean"
     }
     
 }

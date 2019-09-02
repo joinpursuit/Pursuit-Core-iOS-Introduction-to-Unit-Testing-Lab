@@ -32,13 +32,14 @@ class TriviaDetailViewController: UIViewController {
         super.viewDidLoad()
         
         questionLabel.text = trivia.getCleanQuestionString()
-        loadIfTypeBool(Type: trivia.type == "boolean")
+        loadIfTypeIsBool()
         answerOptions = trivia.getAllOptions()
         setButtonTitles()
 
     }
-    private func loadIfTypeBool(Type: Bool) {
-        if Type == true {
+    
+    private func loadIfTypeIsBool() {
+        if trivia.isBoolean() {
             let thirdButton = allOptionsButtons[2]
             thirdButton.isHidden = true
             let fourthButton = allOptionsButtons[3]
@@ -55,7 +56,7 @@ class TriviaDetailViewController: UIViewController {
     private func disableButtons() {
         for index in 0..<answerOptions.count {
             if allOptionsButtons[index].titleLabel?.text == trivia.getCleanCorrectString() {
-                allOptionsButtons[index].setTitleShadowColor(.blue, for: .disabled)
+                allOptionsButtons[index].setTitleColor(.blue, for: .disabled)
             }
             allOptionsButtons[index].isEnabled = false
         }
