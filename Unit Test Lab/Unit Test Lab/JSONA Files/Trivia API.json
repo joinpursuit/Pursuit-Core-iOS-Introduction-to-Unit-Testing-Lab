@@ -1,0 +1,121 @@
+{
+    "response_code": 0,
+    "results": [
+        {
+            "category": "Geography",
+            "type": "boolean",
+            "difficulty": "medium",
+            "question": "The%20surface%20area%20of%20Russia%20is%20slightly%20larger%20than%20that%20of%20the%20dwarf%20planet%20Pluto.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+                "False"
+            ]
+        },
+        {
+            "category": "Art",
+            "type": "boolean",
+            "difficulty": "easy",
+            "question": "Leonardo%20da%20Vinci%27s%20Mona%20Lisa%20does%20not%20have%20eyebrows.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+                "False"
+            ]
+        },
+        {
+            "category": "Entertainment%3A%20Video%20Games",
+            "type": "multiple",
+            "difficulty": "hard",
+            "question": "What%20was%20the%20world%27s%20first%20video%20game%3F",
+            "correct_answer": "Tennis%20for%20Two",
+            "incorrect_answers": [
+                "Spacewar%21",
+                "Pong",
+                "Space%20Travel"
+            ]
+        },
+        {
+            "category": "Entertainment%3A%20Video%20Games",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "Who%20is%20the%20villain%20company%20in%20%22Stardew%20Valley%22%3F",
+            "correct_answer": "Joja%20Co%20",
+            "incorrect_answers": [
+                "Ronin",
+                "Empire",
+                "Robotnik%20Industry%27s%20"
+            ]
+        },
+        {
+            "category": "Entertainment%3A%20Music",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "Which%20of%20these%20languages%20was%20NOT%20included%20in%20the%202016%20song%20%22Don%27t%20Mind%22%20by%20Kent%20Jones%3F",
+            "correct_answer": "Portuguese",
+            "incorrect_answers": [
+                "Japanese",
+                "French",
+                "Spanish"
+            ]
+        },
+        {
+            "category": "Entertainment%3A%20Music",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "Finish%20these%20lyrics%20from%20the%202016%20song%20%22Panda%22%20by%20Desiigner%3A%20%22I%20got%20broads%20in%20_______%22.",
+            "correct_answer": "Atlanta",
+            "incorrect_answers": [
+                "Savannah",
+                "Augusta",
+                "Marietta"
+            ]
+        },
+        {
+            "category": "Entertainment%3A%20Video%20Games",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "What%20is%20the%20name%20of%20the%20final%20boss%20in%20Turok%3A%20Dinosaur%20Hunter%3F",
+            "correct_answer": "The%20Campaigner",
+            "incorrect_answers": [
+                "The%20Primagen",
+                "Oblivion",
+                "Lord%20Tyrannus"
+            ]
+        },
+        {
+            "category": "History",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "How%20many%20times%20was%20Albert%20Einstein%20married%20in%20his%20lifetime%3F",
+            "correct_answer": "Twice",
+            "incorrect_answers": [
+                "Five",
+                "Thrice",
+                "Once"
+            ]
+        },
+        {
+            "category": "Entertainment%3A%20Video%20Games",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "Which%20of%20these%20is%20NOT%20the%20name%20of%20a%20team%20leader%20in%20Pok%C3%A9mon%20GO%3F",
+            "correct_answer": "Leif",
+            "incorrect_answers": [
+                "Blanche",
+                "Spark",
+                "Candela"
+            ]
+        },
+        {
+            "category": "Entertainment%3A%20Music",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "African-American%20performer%20Sammy%20Davis%20Jr.%20was%20known%20for%20losing%20which%20part%20of%20his%20body%20in%20a%20car%20accident%3F",
+            "correct_answer": "Left%20Eye",
+            "incorrect_answers": [
+                "Right%20Ear",
+                "Right%20Middle%20Finger",
+                "Nose"
+            ]
+        }
+    ]
+}
