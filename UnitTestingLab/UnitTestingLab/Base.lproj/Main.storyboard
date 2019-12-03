@@ -105,6 +105,9 @@
                         <viewLayoutGuide key="safeArea" id="JfZ-DW-nBd"/>
                     </view>
                     <navigationItem key="navigationItem" id="ytY-R4-dcB"/>
+                    <connections>
+                        <outlet property="tableView" destination="aPV-Z7-0aL" id="Igj-8g-eRZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j2Z-Qc-EbH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -134,6 +137,9 @@
                         <viewLayoutGuide key="safeArea" id="xFL-56-aRT"/>
                     </view>
                     <navigationItem key="navigationItem" id="kf7-Xs-mIw"/>
+                    <connections>
+                        <outlet property="openingCrawlLabel" destination="VLZ-6C-VGi" id="I28-DO-AHF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Taa-DL-9Ne" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -184,6 +190,9 @@
                         <viewLayoutGuide key="safeArea" id="77j-cB-YQd"/>
                     </view>
                     <navigationItem key="navigationItem" id="bV2-Gd-bLe"/>
+                    <connections>
+                        <outlet property="tableView" destination="Lmn-Vb-qXG" id="x9Z-wr-1T0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dfX-Bf-7IO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -224,6 +233,11 @@
                         <viewLayoutGuide key="safeArea" id="ceq-w5-U81"/>
                     </view>
                     <navigationItem key="navigationItem" id="Iaz-cl-vaW"/>
+                    <connections>
+                        <outlet property="possibleAnswersTextView" destination="L6V-bo-DFf" id="pdc-5w-qhe"/>
+                        <outlet property="questionLabel" destination="EEG-Yq-JfC" id="VXV-7b-Pq2"/>
+                        <outlet property="userInputTextField" destination="Btk-Bi-ZuB" id="y1Y-Yo-F8v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xRE-bc-dIA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

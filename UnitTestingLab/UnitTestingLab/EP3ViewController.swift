@@ -38,7 +38,7 @@ class EP3ViewController: UIViewController {
         }
         
         let question = questions[indexPath.row]
-        ep3DVC.question = question
+        ep3DVC.trivia = question
     }
 
 }
@@ -51,7 +51,7 @@ extension EP3ViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ep3Cell", for: indexPath)
         let question = questions[indexPath.row]
-        cell.textLabel?.text = question.question
+        cell.textLabel?.text = question.removePercentEncoding(encodedString: question.question)
         return cell
     }
 }

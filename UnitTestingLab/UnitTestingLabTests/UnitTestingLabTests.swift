@@ -91,10 +91,39 @@ class UnitTestingLabTests: XCTestCase {
         let data = Bundle.readjSONData(filename: filename, ext: ext)
 
         //Act
-        let questions = TriviaData.getQuestions(from: data)
+        let questions = Trivia.getQuestions(from: data)
 
         //Assert
         XCTAssertGreaterThan(questions.count, 0)
+    }
+    
+    func testEP3RemovePercentEndcodingFromString(){
+        
+        //Arrange
+        let trivia = Trivia(question: "", correctAnswer: "", incorrectAnswers: [""], type: "")
+        let percentString = "Entertainment%3A%20Music"
+        let expectedString = "Entertainment: Music"
+        
+        //Act
+        let validString = trivia.removePercentEncoding(encodedString: percentString)
+        
+        
+        //Assert
+        XCTAssertEqual(validString, expectedString)
+    }
+    
+    func testEP3getAllPossibleAnswersArr(){
+        
+        //Arrange
+        let trivia = Trivia(question: "", correctAnswer: "0", incorrectAnswers: ["1","2","3"], type: "")
+        let expectResponse = ["0","3","2","1"]
+        
+        //Act
+        let validResponse = trivia.getAllPossibleAnswers()
+        print(validResponse)
+        
+        //Assert
+        XCTAssertTrue(Set(validResponse) == (Set(expectResponse)))
     }
 
 }
