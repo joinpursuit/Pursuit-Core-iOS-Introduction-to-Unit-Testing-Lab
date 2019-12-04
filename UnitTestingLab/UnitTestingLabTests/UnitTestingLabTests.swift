@@ -9,26 +9,118 @@
 import XCTest
 @testable import UnitTestingLab
 
+let filename = "jokesAPI"
+let ext = "json"
+
 class UnitTestingLabTests: XCTestCase {
-
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    func testGettingJokes() {
+        // arrange
+        let expectedJokesCount = 10
+        let data = Bundle.readRawJSONData(filename: filename, ext: ext)
+        
+        // act
+        let jokes = Joke.getJoke(from: data)
+        
+        // assert
+        XCTAssertEqual(jokes.count, expectedJokesCount)
     }
+    
+    func testIFirstJokeSetup() {
+        // arrange
+        //        let filename = "jokesAPI"
+        //        let ext = "json"
+        //        let data = Bundle.readRawJSONData(filename: filename, ext: ext)
+        //        let jokes = Joke.getJokes(from: data)
+        //        let expectedFirstJoke = "What's the object-oriented way to become wealthy?"
+        //
+        //        // act
+        //        let joke = firstJoke?.setup ?? "correct"
+        //
+        //        // assert
+        //        XCTAssertEqual(expectedJoke, joke, "expected joke should be \(expectedJoke)")
+        
+        // arrange
+        let firstJoke = getJokes().first
+        let expectedJoke = "What's the object-oriented way to become wealthy?"
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        //act
+        let setup = firstJoke?.setup ?? "no jokes"
+
+        //assert
+        XCTAssertEqual(expectedJoke, setup, "first joke should be \(expectedJoke)")
+
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
+
+
+extension UnitTestingLabTests {
+
+    func getRawData() -> Data {
+        let data = Bundle.readRawJSONData(filename: filename, ext: ext)
+        return data
+    }
+    func getJokes() -> [Joke] {
+        let data = getRawData()
+        let jokesAll = Joke.getJoke(from: data)
+        return jokesAll
+    }
+}
+
+
+//
+//    func testFirstUserNameIsChristine() {
+//        // arrange
+//        let filename = "randomUsers"
+//        let ext = "json"
+//        let data = Bundle.readRawJSONData(filename: filename, ext: ext)
+//        let users = RandomUserData.getUsers(from: data)
+//        let expectedFirstName = "Christine"
+//
+//        // act
+//        let firstUser = users.first!
+//
+//        // assert
+//        XCTAssertEqual(firstUser.name.firstName, expectedFirstName, "\(firstUser.name.firstName) should be equal to \(expectedFirstName)")
+//    }
+//
+//    func testFirstUserCountry() {
+//        // arrange
+//        let firstUser = getUsers().first
+//     let expectedCountry = "United States"
+//
+//        // act
+//        let country = firstUser?.location.country ?? "Ukraine"
+//
+//        // assert
+//        XCTAssertEqual(expectedCountry, country, "expected country sould be \(expectedCountry)")
+//    }
+//
+//    func testFirstUserPostcode() {
+//        // arrange
+//        let firstUser = getUsers().first
+//        let expectedPostcode = "29056"
+//
+//        //act
+//        let postcode = firstUser?.location.postcode.info()
+//
+//        // assert
+//        XCTAssertEqual(expectedPostcode, postcode, "postcode should be equal to \(expectedPostcode)")
+//    }
+//
+//}
+//
+//extension RandomUserAppTests {
+//
+//    func getRawData() -> Data {
+//        let data = Bundle.readRawJSONData(filename: filename, ext: ext)
+//        return data
+//    }
+//    func getUsers() -> [User] {
+//        let data = getRawData()
+//        let users = RandomUserData.getUsers(from: data)
+//        return users
+//    }
+//}
+
+

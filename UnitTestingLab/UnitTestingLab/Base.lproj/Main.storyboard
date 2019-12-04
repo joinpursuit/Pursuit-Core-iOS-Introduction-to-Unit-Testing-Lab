@@ -74,14 +74,33 @@
                     <view key="view" contentMode="scaleToFill" id="hid-JC-eAd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gJE-eq-uCn">
+                                <rect key="frame" x="20" y="384" width="374" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="EOq-qd-egK" firstAttribute="bottom" secondItem="gJE-eq-uCn" secondAttribute="bottom" constant="301" id="6QG-sm-yma"/>
+                            <constraint firstItem="gJE-eq-uCn" firstAttribute="leading" secondItem="EOq-qd-egK" secondAttribute="leading" constant="20" id="7g6-GO-EAN"/>
+                            <constraint firstItem="gJE-eq-uCn" firstAttribute="top" secondItem="EOq-qd-egK" secondAttribute="top" constant="296" id="bxM-F3-cwg"/>
+                            <constraint firstItem="EOq-qd-egK" firstAttribute="trailing" secondItem="gJE-eq-uCn" secondAttribute="trailing" constant="20" id="od1-aa-jNS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="EOq-qd-egK"/>
                     </view>
                     <navigationItem key="navigationItem" id="GeZ-aL-MpG"/>
+                    <connections>
+                        <outlet property="textView" destination="gJE-eq-uCn" id="3xz-wa-YGn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yB8-Mb-dYM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2920" y="113"/>
+            <point key="canvasLocation" x="2918.840579710145" y="112.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="dru-TD-kHv">
@@ -115,11 +134,11 @@
             </objects>
             <point key="canvasLocation" x="1986" y="1527"/>
         </scene>
-        <!--Item-->
+        <!--Jokes-->
         <scene sceneID="n2p-V1-aBL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rUB-fC-tke" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="oiu-Lh-MXD"/>
+                    <tabBarItem key="tabBarItem" title="Jokes" id="oiu-Lh-MXD"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wQU-A8-QIZ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

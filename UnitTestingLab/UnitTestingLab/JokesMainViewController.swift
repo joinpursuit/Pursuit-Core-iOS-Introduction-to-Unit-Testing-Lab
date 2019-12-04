@@ -10,6 +10,8 @@ import UIKit
 
 class JokesMainViewController: UIViewController {
     
+    
+    
     @IBOutlet weak var tableView: UITableView!
     
     var jokes = [Joke]() {
@@ -25,7 +27,19 @@ class JokesMainViewController: UIViewController {
     }
     
     func loadData() {
-        jokes = Joke.getJoke()
+        let filename = "jokesAPI"
+        let ext = "json"
+        let data = Bundle.readRawJSONData(filename: filename, ext: ext)
+        jokes = Joke.getJoke(from: data)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailJokeVC = segue.destination as? DetailJokesViewController, let indexPath = tableView.indexPathForSelectedRow else {
+            fatalError("verify class name in identity inspector")
+        }
+        let joke = jokes[indexPath.row]
+        
+        detailJokeVC.someJoke = joke
     }
 
 

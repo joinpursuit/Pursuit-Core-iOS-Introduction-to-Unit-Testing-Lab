@@ -20,7 +20,7 @@ struct Joke: Decodable {
 }
 
 extension Joke {
-    static func getJoke() -> [Joke] {
+    static func getJoke(from data: Data) -> [Joke] {
         var jokes = [Joke]()
         
         guard let fileURL = Bundle.main.url(forResource: "jokesAPI", withExtension: "json") else {
@@ -29,7 +29,8 @@ extension Joke {
         do {
             let data = try Data(contentsOf: fileURL)
             
-            let jokeData = try JSONDecoder().decode([Joke].self, from: data)
+            let jokeInfo = try JSONDecoder().decode([Joke].self, from: data)
+            jokes = jokeInfo
         } catch {
             fatalError("failed to load contents \(error)")
         }

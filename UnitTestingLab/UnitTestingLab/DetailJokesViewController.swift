@@ -9,22 +9,23 @@
 import UIKit
 
 class DetailJokesViewController: UIViewController {
-
+    
+    @IBOutlet weak var textView: UITextView!
+    
+    
+    var someJoke: Joke?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        updateUI()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func updateUI() {
+        guard let oneJoke = someJoke else {
+            fatalError("could not get object from prepare for segue")
+        }
+        textView.text = oneJoke.punchline
+        
     }
-    */
-
 }
+
