@@ -28,19 +28,6 @@ class UnitTestingLabTests: XCTestCase {
     
     func testIFirstJokeSetup() {
         // arrange
-        //        let filename = "jokesAPI"
-        //        let ext = "json"
-        //        let data = Bundle.readRawJSONData(filename: filename, ext: ext)
-        //        let jokes = Joke.getJokes(from: data)
-        //        let expectedFirstJoke = "What's the object-oriented way to become wealthy?"
-        //
-        //        // act
-        //        let joke = firstJoke?.setup ?? "correct"
-        //
-        //        // assert
-        //        XCTAssertEqual(expectedJoke, joke, "expected joke should be \(expectedJoke)")
-        
-        // arrange
         let firstJoke = getJokes().first
         let expectedJoke = "What's the object-oriented way to become wealthy?"
 
@@ -66,6 +53,8 @@ extension UnitTestingLabTests {
         return jokesAll
     }
 }
+
+
 
 
 //

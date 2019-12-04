@@ -102,21 +102,74 @@
             </objects>
             <point key="canvasLocation" x="2918.840579710145" y="112.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Star Wars View Controller-->
         <scene sceneID="dru-TD-kHv">
             <objects>
-                <viewController id="CzG-uR-Xmp" sceneMemberID="viewController">
+                <viewController id="CzG-uR-Xmp" customClass="StarWarsViewController" customModule="UnitTestingLab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ebv-6o-BE9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2mG-L6-wcW">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="starWarsCell" textLabel="tMK-Vz-Ijg" style="IBUITableViewCellStyleDefault" id="KJE-0L-Bi0">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KJE-0L-Bi0" id="ksS-90-VRr">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tMK-Vz-Ijg">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="rWe-B2-BGx" kind="show" id="xLl-E9-J3v"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2mG-L6-wcW" firstAttribute="leading" secondItem="pex-kc-zk9" secondAttribute="leading" id="P1t-dl-OfA"/>
+                            <constraint firstItem="2mG-L6-wcW" firstAttribute="bottom" secondItem="pex-kc-zk9" secondAttribute="bottom" id="ghm-uS-kqU"/>
+                            <constraint firstItem="2mG-L6-wcW" firstAttribute="trailing" secondItem="pex-kc-zk9" secondAttribute="trailing" id="vz0-kW-B1k"/>
+                            <constraint firstItem="2mG-L6-wcW" firstAttribute="top" secondItem="pex-kc-zk9" secondAttribute="top" id="yPi-v0-FGq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pex-kc-zk9"/>
                     </view>
                     <navigationItem key="navigationItem" id="yUa-8p-MGb"/>
+                    <connections>
+                        <outlet property="tableView" destination="2mG-L6-wcW" id="Hbh-Ts-82p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yMZ-AQ-tt2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1986" y="804"/>
+            <point key="canvasLocation" x="1985.5072463768117" y="803.57142857142856"/>
+        </scene>
+        <!--Detail Star Wars View Controller-->
+        <scene sceneID="36T-Li-bkU">
+            <objects>
+                <viewController id="rWe-B2-BGx" customClass="DetailStarWarsViewController" customModule="UnitTestingLab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IEx-TG-RP5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="sEv-yg-Lck"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qgs-3I-Ko7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CUa-K9-UQo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2919" y="804"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="NiD-Im-2IU">
@@ -173,11 +226,11 @@
             </objects>
             <point key="canvasLocation" x="-41" y="804"/>
         </scene>
-        <!--Item-->
+        <!--Star Wars-->
         <scene sceneID="bgr-F8-UXR">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="g7P-D8-ycy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="XfB-9V-oGo"/>
+                    <tabBarItem key="tabBarItem" title="Star Wars" id="XfB-9V-oGo"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kuQ-mI-LrP">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
