@@ -7,21 +7,81 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Jokes Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UnitTestingLab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="JokesMainViewController" customModule="UnitTestingLab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="search the joke" translatesAutoresizingMaskIntoConstraints="NO" id="jqP-KR-Cwc">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MSY-Gz-q8e">
+                                <rect key="frame" x="0.0" y="132" width="414" height="681"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="jokeCell" textLabel="g5q-6K-GVf" style="IBUITableViewCellStyleDefault" id="lOT-ea-zSh">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lOT-ea-zSh" id="c9i-qZ-NSs">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="g5q-6K-GVf">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="zxO-ch-gFa" kind="show" id="7My-Oa-uPl"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jqP-KR-Cwc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6a8-FE-s7G"/>
+                            <constraint firstItem="MSY-Gz-q8e" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="QzL-8E-vDn"/>
+                            <constraint firstItem="jqP-KR-Cwc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TBu-1R-HDW"/>
+                            <constraint firstItem="MSY-Gz-q8e" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Vk0-Zo-Dgk"/>
+                            <constraint firstItem="MSY-Gz-q8e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="b18-ro-1kj"/>
+                            <constraint firstItem="jqP-KR-Cwc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="klm-l6-rLe"/>
+                            <constraint firstItem="MSY-Gz-q8e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rBj-7e-1yJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="DFd-jt-3S5"/>
+                    <connections>
+                        <outlet property="tableView" destination="MSY-Gz-q8e" id="RNJ-xz-ZpJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="112.5"/>
+        </scene>
+        <!--Detail Jokes View Controller-->
+        <scene sceneID="0AR-6L-kl4">
+            <objects>
+                <viewController id="zxO-ch-gFa" customClass="DetailJokesViewController" customModule="UnitTestingLab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hid-JC-eAd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="EOq-qd-egK"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GeZ-aL-MpG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yB8-Mb-dYM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2920" y="113"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="dru-TD-kHv">
@@ -80,6 +140,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="KjG-FH-cAz" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="86e-mt-jay">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
