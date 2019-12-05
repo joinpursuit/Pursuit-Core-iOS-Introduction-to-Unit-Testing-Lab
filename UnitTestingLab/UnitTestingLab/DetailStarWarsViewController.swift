@@ -9,22 +9,20 @@
 import UIKit
 
 class DetailStarWarsViewController: UIViewController {
+    
+    @IBOutlet weak var textView: UITextView!
+    
+    var someEpisode: Episode?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        updateUI()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func updateUI() {
+        guard let oneEpisode = someEpisode else {
+            fatalError("could not get object from prepare for segue")
+        }
+        textView.text = oneEpisode.crawl
     }
-    */
-
 }

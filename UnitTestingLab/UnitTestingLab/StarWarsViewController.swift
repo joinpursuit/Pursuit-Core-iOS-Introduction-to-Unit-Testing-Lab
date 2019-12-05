@@ -31,6 +31,14 @@ class StarWarsViewController: UIViewController {
         let data = Bundle.readRawJSONData(filename: fileNameWars, ext: ext)
         episodes = MovieData.getEpisodes(from: data)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailMovieVC = segue.destination as? DetailStarWarsViewController, let indexPath = tableView.indexPathForSelectedRow else {
+            fatalError("verify class name in identity inspector")
+        }
+        let episode = episodes[indexPath.row]
+        detailMovieVC.someEpisode = episode
+    }
 }
 
 extension StarWarsViewController: UITableViewDataSource {
@@ -45,25 +53,7 @@ extension StarWarsViewController: UITableViewDataSource {
         return cell
     }
 }
-//
-//var jokes = [Joke]() {
-//        didSet {
-//            tableView.reloadData()
-//        }
-//    }
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        tableView.dataSource = self
-//        loadData()
-//    }
-//
-//    func loadData() {
-//        let filename = "jokesAPI"
-//        let ext = "json"
-//        let data = Bundle.readRawJSONData(filename: filename, ext: ext)
-//        jokes = Joke.getJoke(from: data)
-//    }
+
 //
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        guard let detailJokeVC = segue.destination as? DetailJokesViewController, let indexPath = tableView.indexPathForSelectedRow else {
