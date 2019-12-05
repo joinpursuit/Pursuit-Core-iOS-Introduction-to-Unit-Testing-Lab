@@ -10,9 +10,9 @@ import XCTest
 @testable import UnitTestingLab
 
 class MovieTests: XCTestCase {
-
-   let fileNameWars = "starWars"
-   let ext = "json"
+    
+    let fileNameWars = "starWars"
+    let ext = "json"
     
     func testGettingEpisodes() {
         // arrange
@@ -25,18 +25,31 @@ class MovieTests: XCTestCase {
         // assert
         XCTAssertEqual(episodes.count, expectedEpisodesCount)
     }
-
+    
+    
+    func testFirstEposodeSetup() {
+        // arrange
+        let firstEpisode = getMovies().first
+        let expectedEpisode = "A New Hope"
+        
+        // act
+        let title = firstEpisode?.title ?? "no episodes"
+        
+        // assert
+        XCTAssertEqual(expectedEpisode, title, "first episode should be \(expectedEpisode)")
+        
+    }
 }
 
-//extension MovieTests {
-//
-//    func getRawDataFromMovie() -> Data {
-//        let data = Bundle.readRawJSONData(filename: fileNameWars, ext: ext)
-//        return data
-//    }
-//    func getMovies() -> [Episode] {
-//        let data = getRawDataFromMovie
-//        let allMovies = Episode.g
-//        return allMovies
-//    }
-//}
+extension MovieTests {
+    
+    func getRawDataFromMovie() -> Data {
+        let data = Bundle.readRawJSONData(filename: fileNameWars, ext: ext)
+        return data
+    }
+    func getMovies() -> [Episode] {
+        let data = getRawDataFromMovie
+        let allMovies = MovieData.getEpisodes(from: data())
+        return allMovies
+    }
+}

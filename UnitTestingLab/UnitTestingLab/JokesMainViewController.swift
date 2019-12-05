@@ -60,15 +60,6 @@ extension JokesMainViewController: UITableViewDataSource {
     }
 }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let weatherVC = segue.destination as? WeatherDetailViewController, let indexPath = tableView.indexPathForSelectedRow else {
-//            fatalError("verify class name in identity inspector")
-//        }
-//        let city = cities[indexPath.row]
-//
-//        weatherVC.cityweather = city
-//    }
-//}
 
 
 
