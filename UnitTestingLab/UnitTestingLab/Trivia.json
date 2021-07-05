@@ -1,0 +1,74 @@
+{
+    "response_code": 0,
+    "results": [{
+        "category": "Entertainment%3A%20Video%20Games",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "Which%20Greek%20letter%20represents%20the%20%22Half-Life%22%20logo%3F",
+        "correct_answer": "Lambda",
+        "incorrect_answers": ["Omega", "Alpha", "Sigma"]
+    }, {
+        "category": "Entertainment%3A%20Music",
+        "type": "multiple",
+        "difficulty": "medium",
+        "question": "Which%20band%20had%20hits%20in%201975%20with%20the%20songs%2C%20%27One%20Of%20These%20Nights%27%20%26%20%27Lyin%20Eyes%27%3F",
+        "correct_answer": "The%20Eagles",
+        "incorrect_answers": ["Fools%20Gold", "The%20Doobie%20Brothers", "Fleetwood%20Mac"]
+    }, {
+        "category": "Sports",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "In%20what%20sport%20is%20a%20%22shuttlecock%22%20used%3F",
+        "correct_answer": "Badminton",
+        "incorrect_answers": ["Table%20Tennis", "Rugby", "Cricket"]
+    }, {
+        "category": "Mythology",
+        "type": "multiple",
+        "difficulty": "medium",
+        "question": "Which%20of%20these%20Roman%20gods%20doesn%27t%20have%20a%20counterpart%20in%20Greek%20mythology%3F",
+        "correct_answer": "Janus",
+        "incorrect_answers": ["Vulcan", "Juno", "Mars"]
+    }, {
+        "category": "History",
+        "type": "boolean",
+        "difficulty": "medium",
+        "question": "The%20Hundred%20Years%27%20War%20was%20fought%20for%20more%20than%20a%20hundred%20years.",
+        "correct_answer": "True",
+        "incorrect_answers": ["False"]
+    }, {
+        "category": "Entertainment%3A%20Japanese%20Anime%20%26%20Manga",
+        "type": "multiple",
+        "difficulty": "hard",
+        "question": "In%20%22Hunter%20x%20Hunter%22%2C%20which%20of%20the%20following%20is%20NOT%20a%20type%20of%20Nen%20aura%3F",
+        "correct_answer": "Restoration",
+        "incorrect_answers": ["Emission", "Transmutation", "Specialization"]
+    }, {
+        "category": "Entertainment%3A%20Music",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "Which%20of%20the%20following%20songs%20did%20Elton%20John%20perform%20following%20Princess%20Diane%27s%20passing%3F",
+        "correct_answer": "Candles%20in%20the%20Wind",
+        "incorrect_answers": ["I%20Guess%20That%27s%20Why%20They%20Call%20It%20The%20Blues", "Your%20Song", "Island%20Girl"]
+    }, {
+        "category": "Entertainment%3A%20Books",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "In%20the%20name%20of%20the%20fictional%20SCP%20Foundation%2C%20what%20does%20the%20%22SCP%22%20stand%20for%3F",
+        "correct_answer": "Special%20Containment%20Procedures",
+        "incorrect_answers": ["Secure%2C%20Contain%2C%20Protect", "Supernatural%20Creature%20Preservation", "Silent%20Community%20Protection"]
+    }, {
+        "category": "History",
+        "type": "boolean",
+        "difficulty": "medium",
+        "question": "The%20Korean%20War%20ended%20in%201953%20without%20any%20ceasefire.",
+        "correct_answer": "False",
+        "incorrect_answers": ["True"]
+    }, {
+        "category": "Entertainment%3A%20Music",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "How%20many%20strings%20are%20there%20on%20a%20cello%3F",
+        "correct_answer": "4",
+        "incorrect_answers": ["5", "6", "8"]
+    }]
+}
